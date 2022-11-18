@@ -5,11 +5,11 @@ programa
 	{
 	     //pede-se 50 más com 10 já da pra fazer 
 	     //dex dados sobre sexo F para feminino e M para Masculino
-		caracter sexo[10]={'m','m','f','f','f','m','m','m','m','f'}
+		caracter sexo[10]={'m','m','m','m','m','f','f','f','f','f'}
 
 		//Pede-se 50 alturas, más 10 é o suficiente para calcular o algoritmo
 		//dez alturas
-		real altura[10]={1.40,1.87,1.78,1.75,1.55,1.35,1.67,1.56,1.7,1.89}
+		real altura[10]={1.40,1.40,1.40,1.40,1.80,1.65,1.56,1.85,1.35,1.55}
 
 		//a maior e menor altura do grupo
 		real maiorAltura=0.0
@@ -42,16 +42,19 @@ programa
 				//Soma os dados do vetor altura, de acordo com o teste
 				//condicional 'F' de feminino
 				alturaMulheres=alturaMulheres+altura[m]
-
-				//sobscreve o valor de qtdAlturasMulheres a cada passagem
-				qtdAlturasMulheres=m
+                    qtdAlturasMulheres++
+				
 				
 			}
 			
 		}
+		
 		//preciso somar um al valor total de mulheres para que o calculo
 		//de media der certo já que o array começa contar do zero. 
-		qtdAlturasMulheres=qtdAlturasMulheres+1
+		//qtdAlturasMulheres=qtdAlturasMulheres+1
+		escreva("\n"+qtdAlturasMulheres)
+		escreva("\n")
+		escreva("\n"+alturaMulheres)
 
 		//faço o calculo de média bem simples, essas variaveis já 
 		//foram declaradas antes do SE() e do Para()
@@ -93,14 +96,3 @@ programa
 		
 	}
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 2393; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
